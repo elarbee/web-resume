@@ -1,0 +1,14 @@
+{
+  "name": "web-resume",
+  "version": "1.0.0",
+  "description": "resume.elarbee.io",
+  "main": "/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Elarbee <alex@elarbee.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
