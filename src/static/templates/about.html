@@ -1,0 +1,58 @@
+<style>
+  section.about, table.code-panels{
+  	width:100%;
+  	height:100vh;
+  }
+  .about-code-panel, .about-render-panel{
+  	width:50%;
+  }
+  .about-code-panel textarea{
+  	width:100%;
+  	height:100%;
+  	background-color: #222;
+  	color:white;
+  	  	font-size: 24px;
+  }
+  .about-code-panel textarea, .about-render-panel{
+  	padding:25px;
+  }	
+  .about-code-panel{
+  	background-color: #222;
+  	padding:0px;
+  }
+  .about-render-panel{
+  	font-size: 18px;
+  	font-family: 'Questrial', sans-serif;
+  	vertical-align: top;
+  }
+  .about-render-panel p h1{
+  	font-size: 2em;
+    margin-bottom: 0px;
+  }
+  .about-render-panel p p{
+  	font-weight: 300;
+  }
+
+  .fadeOut{
+  	opacity: 0;
+  	transition-duration: 2s;
+  }
+
+  .fadeIn{
+  	opacity: 1;
+  	transition-duration: 2s;
+  }
+
+</style>
+<section class="about" ng-controller="aboutMeCtrl">
+		<table class="code-panels">
+			<tr>
+				<td class="about-code-panel" >
+					<textarea ng-model="aboutCode" ng-class="panelClass"></textarea> 
+				</td>
+				<td class="about-render-panel" ng-class="panelClass">
+					<p ng-bind-html="aboutCode"></p>
+				</td>
+			</tr>
+		</table>
+</section>

@@ -1,0 +1,41 @@
+<style type="text/css">
+	.logo-wrapper {
+		float: left;
+    	height: 125px;
+    	width: 125px;
+    	padding: 25px;
+	}
+	.navbar{
+		font-family: 'Questrial', sans-serif;
+	}
+	.badge{
+		float: left;
+	}
+	.badge-label {
+    display: inline-block;
+	}
+	.nav-links{
+		display: inline-block;
+	}
+	.nav-link{
+		display: inline-block;
+	}
+</style>
+<div class="navbar" ng-controller="navbarCtrl">
+	<div class="badge">
+		<div class="logo-wrapper">
+			<img class="logo" src="img/logo.svg">
+		</div>
+		<div class="badge-label">
+			<h1><span style="font-weight: 600;">ALEX</span> ELARBEE</h1>
+			<h2>FULL STACK WEB DEVELOPER</h2>
+			<i class="fa fa-envelope"></i><a href="mailto:alex@elarbee.io">alex@elarbee.io</a>
+			<i class="fa fa-github"></i><a href="github.com/elarbee">github.com/elarbee</a>
+		</div>
+	</div>
+	<div class="nav-links">
+		<div class="nav-link" ng-repeat="link in navLinks">
+			<h1 ng-bind="link"></h1>
+		</div>
+	</div>
+<div>

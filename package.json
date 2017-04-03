@@ -2,13 +2,17 @@
   "name": "web-resume",
   "version": "1.0.0",
   "description": "resume.elarbee.io",
-  "main": "/src/app.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Elarbee <alex@elarbee.io>",
   "license": "ISC",
   "devDependencies": {
-    "bower": "^1.8.0"
+    "bower": "^1.8.0",
+    "express": "^4.15.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0"
   }
 }
