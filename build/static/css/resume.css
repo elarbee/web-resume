@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+  width: 100%;
+  margin: 0px;
+}
+/* Navbar Styles */
+.navbar {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 300;
+  color: #444;
+}
+.logo-wrapper {
+  float: left;
+  height: 125px;
+  width: 125px;
+  padding: 25px;
+}
+.badge {
+  float: left;
+}
+.badge-label {
+  display: inline-block;
+}
+.badge-label i {
+  color: #444;
+  margin: 0px 5px;
+}
+.badge-label a {
+  color: #444;
+}
+.nav-links {
+  display: inline-block;
+}
+.nav-link {
+  display: inline-block;
+}
+/* About Me Styles */
+section.about,
+table.code-panels {
+  width: 100%;
+  height: 100vh;
+}
+.about-code-panel,
+.about-render-panel {
+  width: 50%;
+}
+.about-code-panel textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto Mono', monospace;
+}
+.about-code-panel textarea,
+.about-render-panel {
+  padding: 25px;
+}
+.about-code-panel {
+  background-color: #222;
+  padding: 0px;
+}
+.about-render-panel {
+  font-size: 18px;
+  font-family: 'Questrial', sans-serif;
+  vertical-align: top;
+}
+.about-render-panel p h1 {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+.about-render-panel p p {
+  font-weight: 300;
+}
+.fadeOut {
+  opacity: 0;
+  transition-duration: 2s;
+}
+.fadeIn {
+  opacity: 1;
+  transition-duration: 2s;
+}

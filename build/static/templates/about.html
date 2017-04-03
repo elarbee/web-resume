@@ -1,0 +1,12 @@
+<section class="about" ng-controller="aboutMeCtrl">
+    <table class="code-panels">
+      <tr>
+        <td class="about-code-panel" >
+          <textarea ng-model="aboutCode" ng-class="panelClass"></textarea> 
+        </td>
+        <td class="about-render-panel" ng-class="panelClass">
+          <p ng-bind-html="aboutCode"></p>
+        </td>
+      </tr>
+    </table>
+</section>
