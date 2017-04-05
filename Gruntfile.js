@@ -12,6 +12,13 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       }  
     },
+    copy: {
+        main:{
+            files: [
+            {expand: true,cwd: 'src/', src: ['**/*.html'], dest: 'temp/'}    
+            ]
+        }  
+    },
     less:{
       css:{
         files:{
@@ -20,7 +27,11 @@ module.exports = function(grunt) {
       }
     }
   });
+
+  grunt.registerTask('foo',['copy']);
   grunt.registerTask('build-less',['less']);
   grunt.registerTask('default', ['jshint']);
+
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 };
