@@ -10,14 +10,35 @@ module.exports = function(grunt) {
       jshint:{
         files: ['<%= jshint.files %>'],
         tasks: ['jshint']
-      }  
+      },
+      web:{
+        options:{livereload:true},
+        files: ['src/**/.*.html','src/**/*.js','src/**/*.css','src/**/*.less']
+      },
+      html:{
+        files: ['src/**/*.html'],
+        tasks: ['copy:html']
+      },
+      less:{
+        files:["src/css/resume.less"],
+        tasks: ['less']
+      }
     },
     copy: {
-        main:{
+        html:{
             files: [
-            {expand: true,cwd: 'src/', src: ['**/*.html'], dest: 'temp/'}    
+            {expand: true,cwd: 'src/', src: ['**/*.html'], dest: 'build/'}    
             ]
-        }  
+        }
+    },
+    express: {
+      dev: {
+        options: {
+          script: 'app.js',
+          background: true,
+          port: 9006,
+        }
+      }
     },
     less:{
       css:{
@@ -30,8 +51,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('foo',['copy']);
   grunt.registerTask('build-less',['less']);
-  grunt.registerTask('default', ['jshint']);
-
+  grunt.registerTask('server', ['express', 'watch']);
+  grunt.registerTask('default', ['server']);
   grunt.loadNpmTasks('grunt-contrib-copy');
 
 };

@@ -8,17 +8,20 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Elarbee <alex@elarbee.io>",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/elarbee/web-resume"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elarbee/web-resume"
   },
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.8.0",
+    "connect-livereload": "^0.6.0",
     "express": "^4.15.2",
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
     "load-grunt-tasks": "^3.5.2"
   }
 }
