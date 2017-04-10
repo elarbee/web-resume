@@ -13,11 +13,11 @@ module.exports = function(grunt) {
       },
       web:{
         options:{livereload:true},
-        files: ['src/**/.*.html','src/**/*.js','src/**/*.css','src/**/*.less']
+        files: ['src/**/*.html','src/**/*.js','src/**/*.css','src/**/*.less']
       },
       html:{
         files: ['src/**/*.html'],
-        tasks: ['copy:html']
+        tasks: ['copy']
       },
       less:{
         files:["src/css/resume.less"],
@@ -25,9 +25,14 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-        html:{
+        index:{
             files: [
-            {expand: true,cwd: 'src/', src: ['**/*.html'], dest: 'build/'}    
+            {expand: true,cwd: 'src/', src: ['*.html'], dest: 'build/'}    
+            ]
+        },
+        static:{
+            files: [
+            {expand: true,cwd: 'src/templates', src: ['*.html'], dest: 'build/static/templates'}    
             ]
         }
     },
